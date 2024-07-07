@@ -36,7 +36,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * Executor wrapper
- *
+ * 线程池包装类，本质上是对ExecutorAdapter进行的包装，增加了一些自定义属性以及相关方法
  * @author yanhom
  * @since 1.0.3
  **/

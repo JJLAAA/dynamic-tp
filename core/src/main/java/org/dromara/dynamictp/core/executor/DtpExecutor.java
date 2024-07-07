@@ -48,7 +48,7 @@ import static org.dromara.dynamictp.common.constant.DynamicTpConst.TRACE_ID;
 
 /**
  * Dynamic ThreadPoolExecutor, extending ThreadPoolExecutor, implements some new features
- *
+ * 类适配器的典型实现，将ExecutorAdapter接口适配到ThreadPoolExecutor原生线程池接口，并做适配增强，本质上是一个中间层
  * @author yanhom
  * @since 1.0.0
  **/

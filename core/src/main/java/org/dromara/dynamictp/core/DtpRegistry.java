@@ -85,6 +85,8 @@ public class DtpRegistry extends OnceApplicationContextEventListener {
     /**
      * Get all Executor names.
      *
+     * 注意Java基础知识，对Map的视图的修改会影响Map本身，反之亦然，因此一般需要返回一个不可变视图
+     *
      * @return all executor names
      */
     public static Set<String> getAllExecutorNames() {
@@ -108,6 +110,7 @@ public class DtpRegistry extends OnceApplicationContextEventListener {
      */
     public static void registerExecutor(ExecutorWrapper wrapper, String source) {
         log.info("DynamicTp register executor: {}, source: {}", ExecutorConverter.toMainFields(wrapper), source);
+        // 线程安全
         EXECUTOR_REGISTRY.putIfAbsent(wrapper.getThreadPoolName(), wrapper);
     }
 
@@ -158,7 +161,8 @@ public class DtpRegistry extends OnceApplicationContextEventListener {
 
     /**
      * Refresh while the listening configuration changed.
-     *
+     * 监听配置刷新
+     * 看到这里了
      * @param dtpProperties the main properties that maintain by config center
      */
     public static void refresh(DtpProperties dtpProperties) {

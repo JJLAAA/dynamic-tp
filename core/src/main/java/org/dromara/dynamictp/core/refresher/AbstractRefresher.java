@@ -43,6 +43,8 @@ import static org.dromara.dynamictp.common.constant.DynamicTpConst.MAIN_PROPERTI
 /**
  * AbstractRefresher related
  *
+ * 配置更新的refresher，比如作为一个Diamond的refresher
+ *
  * @author yanhom
  * @since 1.0.0
  **/

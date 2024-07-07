@@ -60,7 +60,7 @@ import static org.dromara.dynamictp.core.support.DtpLifecycleSupport.shutdownGra
 
 /**
  * BeanPostProcessor that handles all related beans managed by Spring.
- *
+ * 通过BeanPostProcessor实现线程池Spring Bean的统一初始化管理
  * @author yanhom
  * @since 1.0.0
  **/

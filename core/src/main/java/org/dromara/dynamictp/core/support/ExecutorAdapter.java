@@ -29,7 +29,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * ExecutorAdapter inherits Executor, the goal of this interface is to be
  * as compatible as possible with {@link java.util.concurrent.ThreadPoolExecutor}.
- *
+ * 线程池适配器，多种类型的适配器实现，实现了对原生线程池在不同场景下的增强
+ * 贪心线程池的增强也需要依赖这样的实现方式
  * @author dragon-zhang
  * @since 1.1.3
  * @param <E> the executor type
